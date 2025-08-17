@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* PANDORA AFRIKA - Dark Luxury Design System */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Core Brand Colors */
+    --background: 25 56% 8%;  /* #201309 - Dark brown */
+    --foreground: 43 81% 85%; /* Light golden text */
+    --surface: 25 45% 12%;    /* Slightly lighter brown for cards */
+    
+    /* Brand Golden Palette */
+    --primary: 43 81% 49%;    /* #E29F19 - Main golden */
+    --primary-foreground: 25 56% 8%;
+    --primary-glow: 43 81% 65%; /* Lighter golden for glows */
+    --primary-muted: 43 45% 35%; /* Darker golden for subtle elements */
+
+    /* UI Components */
+    --card: 25 45% 12%;       /* Darker brown cards */
+    --card-foreground: 43 81% 85%;
+    
+    --popover: 25 50% 10%;
+    --popover-foreground: 43 81% 85%;
+    
+    --secondary: 25 35% 18%;   /* Medium brown */
+    --secondary-foreground: 43 81% 85%;
+    
+    --muted: 25 25% 25%;       /* Muted brown */
+    --muted-foreground: 43 40% 60%;
+    
+    --accent: 43 65% 25%;      /* Dark golden accent */
+    --accent-foreground: 43 81% 85%;
+    
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 43 81% 85%;
+    
+    --border: 25 35% 20%;      /* Subtle borders */
+    --input: 25 35% 15%;       /* Input backgrounds */
+    --ring: 43 81% 49%;        /* Golden focus rings */
+
+    /* Layout */
+    --radius: 0.75rem;
+    
+    /* Luxury Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--background)) 0%, hsl(25 45% 12%) 100%);
+    --gradient-golden: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--primary-glow)) 100%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(var(--background) / 0.8) 100%);
+    
+    /* Shadows & Effects */
+    --shadow-luxury: 0 25px 50px -12px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 10px 30px -5px hsl(25 56% 4% / 0.5);
+    
+    /* Animations */
+    --transition-luxury: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Dark mode is our primary theme */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-['Inter'];
+    background: var(--gradient-hero);
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-['Playfair_Display'] font-medium;
+  }
+}
+
+@layer components {
+  /* Hero Section Styles */
+  .hero-title {
+    @apply text-5xl md:text-7xl font-light tracking-tight;
+    background: var(--gradient-golden);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-shadow: 0 0 30px hsl(var(--primary) / 0.3);
+  }
+
+  .hero-subtitle {
+    @apply text-lg md:text-xl text-muted-foreground font-light tracking-wide;
+  }
+
+  /* Luxury Button Variants */
+  .btn-luxury {
+    @apply bg-primary text-primary-foreground px-8 py-4 rounded-lg font-medium;
+    @apply transition-all duration-500 ease-out;
+    @apply shadow-lg hover:shadow-luxury;
+    @apply hover:scale-105 hover:bg-primary/90;
+    background: var(--gradient-golden);
+  }
+
+  .btn-ghost-luxury {
+    @apply border border-primary/30 text-primary px-8 py-4 rounded-lg font-medium;
+    @apply transition-all duration-500 ease-out;
+    @apply hover:bg-primary/10 hover:border-primary/60;
+    @apply backdrop-blur-sm;
+  }
+
+  /* Luxury Card Styles */
+  .card-luxury {
+    @apply bg-card/50 backdrop-blur-lg border border-primary/20 rounded-xl p-8;
+    @apply transition-all duration-500 ease-out;
+    @apply hover:bg-card/70 hover:border-primary/40;
+    @apply hover:shadow-card hover:-translate-y-2;
+  }
+
+  /* Section Styles */
+  .section-container {
+    @apply max-w-7xl mx-auto px-6 py-20;
+  }
+
+  .section-title {
+    @apply text-3xl md:text-5xl font-light text-center mb-16;
+    color: hsl(var(--primary));
+  }
+
+  /* Parallax Effects */
+  .parallax-bg {
+    @apply will-change-transform;
+    transform: translateZ(0);
+  }
+
+  /* Luxury animations */
+  .fade-in-up {
+    @apply opacity-0 translate-y-8;
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .fade-in-left {
+    @apply opacity-0 -translate-x-8;
+    animation: fadeInLeft 0.8s ease-out forwards;
+  }
+
+  .fade-in-right {
+    @apply opacity-0 translate-x-8;
+    animation: fadeInRight 0.8s ease-out forwards;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
