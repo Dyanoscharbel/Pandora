@@ -1,47 +1,21 @@
 import { FileText, Shield, Map, Users, Target, Telescope } from "lucide-react";
+import { useTranslation } from "react-i18next";
 
-const deliverables = [
-  {
-    icon: FileText,
-    title: "Analyse socio-culturelle de votre projet",
-    description: "Étude approfondie de l'environnement social et culturel pour optimiser votre approche"
-  },
-  {
-    icon: Shield,
-    title: "Rapports sécuritaires & économiques sur mesure",
-    description: "Intelligence économique et évaluation des risques spécifiques à votre secteur"
-  },
-  {
-    icon: Map,
-    title: "Cartographie des risques et opportunités",
-    description: "Mapping détaillé des zones d'opportunités et de vigilance pour votre implantation"
-  },
-  {
-    icon: Users,
-    title: "Liste de contacts locaux vérifiés",
-    description: "Réseau de partenaires qualifiés avec mise en relation directe garantie"
-  },
-  {
-    icon: Target,
-    title: "Plan d'action opérationnel",
-    description: "Feuille de route détaillée et prête à déployer pour votre projet"
-  },
-  {
-    icon: Telescope,
-    title: "Installation stratégique de votre entreprise",
-    description: "Nous identifions pour vous les lieux les plus porteuses, sécurisés, adapté à vos besoins , pensées pour créer une valeur locale et renforcer l'acceptabilité sociale."
-  }
-];
+const icons = [FileText, Shield, Map, Users, Target, Telescope];
 
 export const DeliverablesSection = () => {
+  const { t } = useTranslation();
+  const deliverables = t('deliverables.items', { returnObjects: true });
   return (
     <section className="section-container bg-surface/30">
       <h2 className="section-title mb-16">
-        Nos Livrables
+        {t('deliverables.title')}
       </h2>
       
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {deliverables.map((item, index) => (
+        {Array.isArray(deliverables) && deliverables.map((item, index) => {
+          const Icon = icons[index];
+          return (
           <div 
             key={index}
             className="card-luxury fade-in-up"
@@ -49,7 +23,7 @@ export const DeliverablesSection = () => {
           >
             <div className="mb-6">
               <div className="bg-primary/10 p-4 rounded-2xl inline-block border border-primary/20">
-                <item.icon className="text-primary" size={32} />
+                <Icon className="text-primary" size={32} />
               </div>
             </div>
             
@@ -61,7 +35,8 @@ export const DeliverablesSection = () => {
               {item.description}
             </p>
           </div>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

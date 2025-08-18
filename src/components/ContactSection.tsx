@@ -4,6 +4,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MessageCircle, Mail, Shield, X, Check, ChevronDown } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useTranslation } from "react-i18next";
 
 // Liste des pays africains avec codes pays
 const africanCountries = [
@@ -68,6 +69,7 @@ const africanCountries = [
 ];
 
 export const ContactSection = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -120,8 +122,8 @@ export const ContactSection = () => {
   const handleSubmit = (method: 'whatsapp' | 'email') => {
     if (!formData.name || !formData.email || !formData.message) {
       toast({
-        title: "Information manquante",
-        description: "Veuillez remplir tous les champs obligatoires",
+        title: t('contact.error'),
+        description: t('contact.errorMessage'),
         variant: "destructive"
       });
       return;
@@ -130,8 +132,8 @@ export const ContactSection = () => {
     // Vérifier si au moins un pays est sélectionné
     if (formData.countries.length === 0) {
       toast({
-        title: "Pays requis",
-        description: "Veuillez sélectionner au moins un pays",
+        title: t('contact.countryRequired'),
+        description: t('contact.countryRequiredMessage'),
         variant: "destructive"
       });
       return;
@@ -149,8 +151,8 @@ export const ContactSection = () => {
     }
 
     toast({
-      title: "Demande envoyée",
-      description: "Nous vous contacterons dans les plus brefs délais",
+      title: t('contact.success'),
+      description: t('contact.successMessage'),
     });
   };
 
@@ -158,11 +160,11 @@ export const ContactSection = () => {
     <section id="contact" className="section-container">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="section-title mb-8">
-          Vous voulez conquérir le marché africain ?
+          {t('contact.title')}
         </h2>
         
         <div className="text-2xl text-primary font-light mb-16 fade-in-up">
-          Commencez ici...
+          {t('contact.subtitle')}
         </div>
 
         {/* Contact Form */}
@@ -170,13 +172,13 @@ export const ContactSection = () => {
           <div className="space-y-6">
             <div className="grid md:grid-cols-2 gap-4">
               <Input
-                placeholder="Nom complet *"
+                placeholder={t('contact.name')}
                 value={formData.name}
                 onChange={(e) => setFormData(prev => ({...prev, name: e.target.value}))}
                 className="bg-input/50 border-primary/20 focus:border-primary"
               />
               <Input
-                placeholder="Email professionnel *"
+                placeholder={t('contact.email')}
                 type="email"
                 value={formData.email}
                 onChange={(e) => setFormData(prev => ({...prev, email: e.target.value}))}
@@ -186,13 +188,13 @@ export const ContactSection = () => {
             
             <div className="grid md:grid-cols-2 gap-4">
               <Input
-                placeholder="Entreprise"
+                placeholder={t('contact.company')}
                 value={formData.company}
                 onChange={(e) => setFormData(prev => ({...prev, company: e.target.value}))}
                 className="bg-input/50 border-primary/20 focus:border-primary"
               />
               <Input
-                placeholder="Type de projet"
+                placeholder={t('contact.project')}
                 value={formData.project}
                 onChange={(e) => setFormData(prev => ({...prev, project: e.target.value}))}
                 className="bg-input/50 border-primary/20 focus:border-primary"
@@ -202,7 +204,7 @@ export const ContactSection = () => {
             {/* Sélecteur de pays */}
             <div className="space-y-2 text-left">
               <label className="text-sm font-medium text-foreground/80">
-                Pays ciblés *
+                {t('contact.countries')}
               </label>
               <div className="relative" ref={dropdownRef}>
                 <div 
@@ -227,12 +229,12 @@ export const ContactSection = () => {
                     ))
                   ) : (
                     <span className="text-muted-foreground text-sm py-1 px-2">
-                      Sélectionnez un ou plusieurs pays
+                      {t('contact.selectCountries')}
                     </span>
                   )}
                   <input
                     type="text"
-                    placeholder="Rechercher un pays..."
+                    placeholder={t('contact.searchCountry')}
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     onFocus={() => setIsCountryDropdownOpen(true)}
@@ -259,7 +261,7 @@ export const ContactSection = () => {
                       ))
                     ) : (
                       <div className="p-4 text-center text-sm text-muted-foreground">
-                        Aucun pays trouvé
+                        {t('contact.noCountryFound')}
                       </div>
                     )}
                   </div>
@@ -268,7 +270,7 @@ export const ContactSection = () => {
             </div>
 
             <Textarea
-              placeholder="Décrivez votre projet et vos objectifs *"
+              placeholder={t('contact.message')}
               value={formData.message}
               onChange={(e) => setFormData(prev => ({...prev, message: e.target.value}))}
               className="bg-input/50 border-primary/20 focus:border-primary min-h-[120px]"
@@ -277,7 +279,7 @@ export const ContactSection = () => {
             {/* Contact Method Selection */}
             <div className="text-left">
               <div className="text-primary font-medium mb-4">
-                Choisissez votre méthode de contact préférée :
+                {t('contact.method', 'Choisissez votre méthode de contact préférée :')}
               </div>
               
               <div className="grid md:grid-cols-2 gap-4">
@@ -286,7 +288,7 @@ export const ContactSection = () => {
                   className="btn-luxury flex items-center gap-3 py-4"
                 >
                   <MessageCircle size={20} />
-                  WhatsApp Business
+                  {t('contact.whatsapp')}
                 </Button>
                 
                 <Button
@@ -295,7 +297,7 @@ export const ContactSection = () => {
                   className="btn-ghost-luxury flex items-center gap-3 py-4"
                 >
                   <Mail size={20} />
-                  Email Sécurisé
+                  {t('contact.emailBtn')}
                 </Button>
               </div>
             </div>
@@ -306,7 +308,7 @@ export const ContactSection = () => {
         <div className="flex items-center justify-center gap-3 mt-12 text-muted-foreground fade-in-up">
           <Shield size={20} className="text-primary" />
           <span className="text-sm">
-            Nous vous assurons discrétion et confidentialité totale
+            {t('contact.security')}
           </span>
         </div>
       </div>

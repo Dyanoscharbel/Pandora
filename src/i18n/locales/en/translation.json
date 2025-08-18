@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "PANDORA AFRIKA",
+    "subtitle": "Start or expand your business in Africa safely, efficiently, and quickly with our field intelligence.",
+    "cta": "Get a confidential report"
+  },
+  "about": {
+    "title": "About Us",
+    "intro1": "Pandora Afrika is the 'special field intelligence unit' for your African expansion.",
+    "intro2": "Avoid losing millions in investment... Just give us your goals and we will build your business quickly and efficiently.",
+    "pillars": [
+      {
+        "title": "Field Surveys",
+        "description": "Proximity economic intelligence to understand local realities"
+      },
+      {
+        "title": "Verified Network",
+        "description": "Local partners selected and validated for your projects"
+      },
+      {
+        "title": "Strategic Analysis",
+        "description": "Comprehensive assessment of opportunities and risks"
+      }
+    ]
+  },
+  "deliverables": {
+    "title": "Our Deliverables",
+    "items": [
+      {
+        "title": "Socio-cultural analysis of your project",
+        "description": "In-depth study of the social and cultural environment to optimize your approach"
+      },
+      {
+        "title": "Custom security & economic reports",
+        "description": "Economic intelligence and risk assessment specific to your sector"
+      },
+      {
+        "title": "Risk and opportunity mapping",
+        "description": "Detailed mapping of opportunity and caution zones for your establishment"
+      },
+      {
+        "title": "List of verified local contacts",
+        "description": "Network of qualified partners with guaranteed direct connection"
+      },
+      {
+        "title": "Operational action plan",
+        "description": "Detailed and ready-to-deploy roadmap for your project"
+      },
+      {
+        "title": "Strategic setup of your company",
+        "description": "We identify for you the most promising, secure, and suitable locations for your needs, designed to create local value and strengthen social acceptability."
+      }
+    ]
+  },
+  "proof": {
+    "title": "Our Coverage",
+    "stats": [
+      { "number": "54", "label": "all African countries covered" },
+      { "number": "320", "label": "verified partners" },
+      { "number": "98%", "label": "customer satisfaction" }
+    ],
+    "priorityMarketsTitle": "Priority markets (countries where opportunities are maximized)",
+    "countries": [
+      "Nigeria", "Ghana","Algeria","Benin","Senegal","Ethiopia","Tanzania","Uganda", "Kenya", "Ivory Coast", "Cameroon","Gabon","DRC","Congo Brazzaville",
+      "Morocco", "Tunisia", "South Africa", "Egypt", "Ethiopia","Angola","Mozambique","Zambia"
+    ]
+  },
+  "process": {
+    "title": "Exclusive Process",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Confidential Brief",
+        "subtitle": "secure, NDA",
+        "description": "Private consultation to understand your goals and define your implementation strategy"
+      },
+      {
+        "number": "02",
+        "title": "Field Immersion",
+        "subtitle": "discreet and fast missions",
+        "description": "Direct field investigation with our local teams to validate opportunities"
+      },
+      {
+        "number": "03",
+        "title": "Deliverable handover & network introduction",
+        "subtitle": "turnkey",
+        "description": "Delivery of complete results and connection with our qualified partners"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Want to conquer the African market?",
+    "subtitle": "Start here...",
+    "name": "Full name *",
+    "email": "Professional email *",
+    "company": "Company",
+    "project": "Project type",
+    "message": "Describe your project and objectives *",
+    "countries": "Target countries *",
+    "method": "Choose your preferred contact method:",
+    "submit": "Send",
+    "whatsapp": "WhatsApp Business",
+    "emailBtn": "Secure Email",
+    "success": "Request sent",
+    "successMessage": "We will contact you as soon as possible",
+    "error": "Missing information",
+    "errorMessage": "Please fill in all required fields",
+    "countryRequired": "Country required",
+    "countryRequiredMessage": "Please select at least one country",
+    "selectCountries": "Select one or more countries",
+    "searchCountry": "Search for a country...",
+    "noCountryFound": "No country found",
+    "security": "We ensure complete discretion and confidentiality"
+  }
+}

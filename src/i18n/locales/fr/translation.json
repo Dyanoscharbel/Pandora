@@ -1,0 +1,115 @@
+{
+  "hero": {
+    "title": "PANDORA  AFRIKA",
+    "subtitle": "Démarrez ou élargissez sûrement, efficacement et rapidement votre business en Afrique avec notre intelligence terrain.",
+    "cta": "Obtenir un rapport confidentiel"
+  },
+  "about": {
+    "title": "Qui sommes-nous",
+    "intro1": "Pandora Afrika est \"l'unité spéciale de l'intelligence terrain\" pour votre expansion africaine.",
+    "intro2": "Évitez de perdre des millions en investissement... Donnez-nous juste vos objectifs et nous construisons votre business rapidement et efficacement.",
+    "pillars": [
+      {
+        "title": "Enquêtes terrain",
+        "description": "Intelligence économique de proximité pour comprendre les réalités locales"
+      },
+      {
+        "title": "Réseau vérifié",
+        "description": "Partenaires locaux sélectionnés et validés pour vos projets"
+      },
+      {
+        "title": "Analyse stratégique",
+        "description": "Évaluation complète des opportunités et des risques"
+      }
+    ]
+  },
+  "deliverables": {
+    "title": "Nos Livrables",
+    "items": [
+      {
+        "title": "Analyse socio-culturelle de votre projet",
+        "description": "Étude approfondie de l'environnement social et culturel pour optimiser votre approche"
+      },
+      {
+        "title": "Rapports sécuritaires & économiques sur mesure",
+        "description": "Intelligence économique et évaluation des risques spécifiques à votre secteur"
+      },
+      {
+        "title": "Cartographie des risques et opportunités",
+        "description": "Mapping détaillé des zones d'opportunités et de vigilance pour votre implantation"
+      },
+      {
+        "title": "Liste de contacts locaux vérifiés",
+        "description": "Réseau de partenaires qualifiés avec mise en relation directe garantie"
+      },
+      {
+        "title": "Plan d'action opérationnel",
+        "description": "Feuille de route détaillée et prête à déployer pour votre projet"
+      },
+      {
+        "title": "Installation stratégique de votre entreprise",
+        "description": "Nous identifions pour vous les lieux les plus porteuses, sécurisés, adapté à vos besoins , pensées pour créer une valeur locale et renforcer l'acceptabilité sociale."
+      }
+    ]
+  },
+  "proof": {
+    "title": "Notre Couverture",
+    "stats": [
+      { "number": "54", "label": "tout les pays d'afrique couverts" },
+      { "number": "320", "label": "partenaires vérifiés" },
+      { "number": "98%", "label": "de satisfaction client" }
+    ],
+    "priorityMarketsTitle": "Marchés prioritaires( les pays où les opportunités sont maximisées.)",
+    "countries": [
+      "Nigeria", "Ghana","Algérie","Bénin","Sénégal","Ethiopie","Tanzanie","Ouganda", "Kenya", "Côte d'Ivoire", "Cameroon","Gabon","RDC","Congo Brazzaville",
+      "Maroc", "Tunisie", "Afrique du Sud", "Egypte", "Éthiopie","Angola","Mozambique","Zambie"
+    ]
+  },
+  "process": {
+    "title": "Process exclusif",
+    "steps": [
+      {
+        "number": "01",
+        "title": "Brief confidentiel",
+        "subtitle": "sécurisé, NDA",
+        "description": "Consultation privée pour comprendre vos objectifs et définir votre stratégie d'implantation"
+      },
+      {
+        "number": "02",
+        "title": "Immersion terrain",
+        "subtitle": "missions discrètes et rapides",
+        "description": "Investigation directe sur le terrain avec nos équipes locales pour valider les opportunités"
+      },
+      {
+        "number": "03",
+        "title": "Remise livrable & introduction réseau",
+        "subtitle": "clé en main",
+        "description": "Transmission des résultats complets et mise en relation avec nos partenaires qualifiés"
+      }
+    ]
+  },
+  "contact": {
+    "title": "Vous voulez conquérir le marché africain ?",
+    "subtitle": "Commencez ici...",
+    "name": "Nom complet *",
+    "email": "Email professionnel *",
+    "company": "Entreprise",
+    "project": "Type de projet",
+    "message": "Décrivez votre projet et vos objectifs *",
+    "countries": "Pays ciblés *",
+    "method": "Choisissez votre méthode de contact préférée :",
+    "submit": "Envoyer",
+    "whatsapp": "WhatsApp Business",
+    "emailBtn": "Email Sécurisé",
+    "success": "Demande envoyée",
+    "successMessage": "Nous vous contacterons dans les plus brefs délais",
+    "error": "Information manquante",
+    "errorMessage": "Veuillez remplir tous les champs obligatoires",
+    "countryRequired": "Pays requis",
+    "countryRequiredMessage": "Veuillez sélectionner au moins un pays",
+    "selectCountries": "Sélectionnez un ou plusieurs pays",
+    "searchCountry": "Rechercher un pays...",
+    "noCountryFound": "Aucun pays trouvé",
+    "security": "Nous vous assurons discrétion et confidentialité totale"
+  }
+}

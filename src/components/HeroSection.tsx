@@ -1,8 +1,10 @@
 import { Button } from "@/components/ui/button";
 import { ChevronDown } from "lucide-react";
 import heroImage from "@/assets/hero-africa-modern.jpg";
+import { useTranslation } from "react-i18next";
 
 export const HeroSection = () => {
+  const { t } = useTranslation();
   const scrollToSection = (sectionId: string) => {
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
   };
@@ -32,12 +34,12 @@ export const HeroSection = () => {
 
       {/* Hero Content */}
       <div className="relative z-10 text-center px-6 max-w-5xl mx-auto">
-        <h1 className="hero-title mb-8 fade-in-up">
-          PANDORA  AFRIKA
-        </h1>
+          <h1 className="hero-title mb-8 fade-in-up">
+            {t('hero.title')}
+          </h1>
         
         <div className="hero-subtitle mb-12 max-w-3xl mx-auto fade-in-up" style={{animationDelay: '0.2s'}}>
-          Démarrez ou élargissez sûrement, efficacement et rapidement votre business en Afrique...
+            {t('hero.subtitle')}
         </div>
 
         <div className="fade-in-up" style={{animationDelay: '0.4s'}}>
@@ -45,7 +47,7 @@ export const HeroSection = () => {
             className="btn-luxury text-lg px-12 py-6"
             onClick={() => scrollToSection('contact')}
           >
-            Obtenir un rapport confidentiel
+              {t('hero.cta')}
           </Button>
         </div>
       </div>

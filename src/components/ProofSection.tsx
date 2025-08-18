@@ -1,21 +1,14 @@
 import africaNetwork from "@/assets/africa-network.jpg";
-
-const stats = [
-  { number: "54", label: "tout les pays d'afrique couverts" },
-  { number: "320", label: "partenaires vérifiés" },
-  { number: "98%", label: "de satisfaction client" }
-];
-
-const countries = [
-  "Nigeria", "Ghana","Algérie","Bénin","Sénégal","Ethiopie","Tanzanie","Ouganda", "Kenya", "Côte d'Ivoire", "Cameroon","Gabon","RDC","Congo Brazzaville",
-  "Maroc", "Tunisie", "Afrique du Sud", "Egypte", "Éthiopie","Angola","Mozambique","Zambie"
-];
+import { useTranslation } from "react-i18next";
 
 export const ProofSection = () => {
+  const { t } = useTranslation();
+  const stats = t('proof.stats', { returnObjects: true });
+  const countries = t('proof.countries', { returnObjects: true });
   return (
     <section className="section-container">
       <h2 className="section-title mb-16">
-        Notre Couverture
+        {t('proof.title')}
       </h2>
       
       <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -35,7 +28,7 @@ export const ProofSection = () => {
         <div className="fade-in-right">
           {/* Key Statistics */}
           <div className="grid grid-cols-3 gap-8 mb-12">
-            {stats.map((stat, index) => (
+            {Array.isArray(stats) && stats.map((stat, index) => (
               <div 
                 key={index}
                 className="text-center fade-in-up"
@@ -54,10 +47,10 @@ export const ProofSection = () => {
           {/* Countries Grid */}
           <div className="fade-in-up" style={{animationDelay: '0.3s'}}>
             <h3 className="text-primary font-semibold text-xl mb-6">
-              Marchés prioritaires( les pays où les opportunités sont maximisées.)
+              {t('proof.priorityMarketsTitle')}
             </h3>
             <div className="grid grid-cols-2 gap-3">
-              {countries.map((country, index) => (
+              {Array.isArray(countries) && countries.map((country, index) => (
                 <div 
                   key={index}
                   className="bg-card/30 border border-primary/10 rounded-lg px-4 py-3 text-center hover:border-primary/30 transition-all duration-300"
