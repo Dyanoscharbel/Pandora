@@ -1,14 +1,14 @@
 import africaNetwork from "@/assets/africa-network.jpg";
 
 const stats = [
-  { number: "54", label: "pays couverts" },
+  { number: "54", label: "tout les pays d'afrique couverts" },
   { number: "320", label: "partenaires vérifiés" },
   { number: "98%", label: "de satisfaction client" }
 ];
 
 const countries = [
-  "Nigeria", "Ghana", "Kenya", "Côte d'Ivoire", "Sénégal", "Rwanda",
-  "Maroc", "Tunisie", "Afrique du Sud", "Botswana", "Maurice", "Éthiopie"
+  "Nigeria", "Ghana","Algérie","Bénin","Sénégal","Ethiopie","Tanzanie","Ouganda", "Kenya", "Côte d'Ivoire", "Cameroon","Gabon","RDC","Congo Brazzaville",
+  "Maroc", "Tunisie", "Afrique du Sud", "Egypte", "Éthiopie","Angola","Mozambique","Zambie"
 ];
 
 export const ProofSection = () => {
@@ -54,7 +54,7 @@ export const ProofSection = () => {
           {/* Countries Grid */}
           <div className="fade-in-up" style={{animationDelay: '0.3s'}}>
             <h3 className="text-primary font-semibold text-xl mb-6">
-              Marchés prioritaires
+              Marchés prioritaires( les pays où les opportunités sont maximisées.)
             </h3>
             <div className="grid grid-cols-2 gap-3">
               {countries.map((country, index) => (

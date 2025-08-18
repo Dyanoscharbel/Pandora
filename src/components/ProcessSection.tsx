@@ -39,11 +39,6 @@ export const ProcessSection = () => {
               className="relative fade-in-up"
               style={{animationDelay: `${0.2 * index}s`}}
             >
-              {/* Connection Line */}
-              {index < steps.length - 1 && (
-                <div className="hidden md:block absolute top-24 left-full w-full h-px bg-gradient-to-r from-primary/40 to-transparent z-0"></div>
-              )}
-              
               {/* Step Card */}
               <div className="relative z-10 text-center">
                 {/* Step Number */}

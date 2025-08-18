@@ -1,4 +1,4 @@
-import { FileText, Shield, Map, Users, Target } from "lucide-react";
+import { FileText, Shield, Map, Users, Target, Telescope } from "lucide-react";
 
 const deliverables = [
   {
@@ -25,6 +25,11 @@ const deliverables = [
     icon: Target,
     title: "Plan d'action opérationnel",
     description: "Feuille de route détaillée et prête à déployer pour votre projet"
+  },
+  {
+    icon: Telescope,
+    title: "Installation stratégique de votre entreprise",
+    description: "Nous identifions pour vous les lieux les plus porteuses, sécurisés, adapté à vos besoins , pensées pour créer une valeur locale et renforcer l'acceptabilité sociale."
   }
 ];
 
