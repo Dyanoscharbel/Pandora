@@ -1,9 +1,10 @@
+import { useEffect } from "react";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import PlausibleProvider from '@plausible-analytics/react';
+import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import plausible from "@plausible-analytics/tracker";
 
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
@@ -11,25 +12,35 @@ import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 
 const queryClient = new QueryClient();
 
+// Tracker automatique des pages
+const PlausibleTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    plausible("pageview", { u: window.location.href });
+  }, [location]);
+
+  return null;
+};
+
 const App = () => (
-  <PlausibleProvider domain="pandoraafrika.com">
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <div style={{ position: 'fixed', top: 16, right: 16, zIndex: 100 }}>
-          <LanguageSwitcher />
-        </div>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </PlausibleProvider>
+  <QueryClientProvider client={queryClient}>
+    <TooltipProvider>
+      <Toaster />
+      <Sonner />
+      <div style={{ position: "fixed", top: 16, right: 16, zIndex: 100 }}>
+        <LanguageSwitcher />
+      </div>
+      <BrowserRouter>
+        <PlausibleTracker />
+        <Routes>
+          <Route path="/" element={<Index />} />
+          {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </TooltipProvider>
+  </QueryClientProvider>
 );
 
 export default App;
