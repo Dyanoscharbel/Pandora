@@ -14,7 +14,7 @@ const queryClient = new QueryClient();
 
 // Initialisation de Plausible
 init({
-  domain: "WWW.pandoraafrika.com", // remplace par ton domaine
+  domain: "pandoraafrika.com", // remplace par ton domaine
 });
 
 // Tracker automatique des pages
