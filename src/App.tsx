@@ -17,7 +17,7 @@ const App = () => {
       const script = document.createElement("script");
       script.src = "https://plausible.io/js/script.js";
       script.defer = true;
-      script.setAttribute("data-domain", "ton-domaine.com"); // ⚠️ mets ton vrai domaine ou ton .vercel.app
+      script.setAttribute("data-domain", "https://www.pandoraafrika.com"); // ⚠️ mets ton vrai domaine ou ton .vercel.app
       document.head.appendChild(script);
     }
   }, []);
